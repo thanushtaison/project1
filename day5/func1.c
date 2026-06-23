@@ -1,18 +1,6 @@
 #include<stdio.h>
-int main(){
-    int o;
-    while(1){
-    printf("\n<---Menu-driven Toolkit--->\n");
-    printf("1.Reverse\n2.Palindrome\n3.Prime number\n4.Factorial\n5.Fibonacci\n6.Armstrong number\n7.Exit\n");
-    printf("Select the option:");
-    scanf("%d",&o);
-    if(o==7){
-        printf("____Exited____");
-        return 0;
-    }
-    switch(o){
-        case 1:
-        printf("\nReverse option is Selected\nEnter the input:");
+void re(){
+    printf("\nReverse option is Selected\nEnter the input:");
         int n,rev=0;
         scanf("%d",&n);
         while(n>0){
@@ -21,14 +9,14 @@ int main(){
             n=n/10;
         }
         printf("%d\n",rev);
-        break;
-        case 2:
-        printf("\nPalindrome is Selected\nEnter the input:");
+}
+void pal(){
+    printf("\nPalindrome is Selected\nEnter the input:");
         int k,r=0;
         scanf("%d",&k);
         int m=k;
         while(k>0){
-            int u=n%10;
+            int u=k%10;
             r=r*10+u;
             k=k/10;
         }
@@ -39,9 +27,9 @@ int main(){
         else{
             printf("\nNot a Palindrome\n");
         }
-        break;
-        case 3:
-        printf("\nPrime number is Selected\nEnter the input:");
+}
+int prime(){
+    printf("\nPrime number is Selected\nEnter the input:");
              int q,f=0;
              scanf("%d",&q);
              if(q==1){
@@ -59,19 +47,20 @@ int main(){
              }
              else{
                 printf("It is not prime number\n");
-             }
-             break;
-            case 4:
-            printf("\nFactorial is selected\nEnter the input:");
+             }   
+             return 0;
+}
+void fac(){
+    printf("\nFactorial is selected\nEnter the input:");
             int x,fact=1;
             scanf("%d",&x);
             for(int i=1;i<=x;i++){
                 fact=fact*i;
             }
-            printf("\n%d\n",fact);
-            break;
-            case 5:
-            printf("\nFibonacci is Selected\nEnter the input:");
+            printf("\n%d\n",fact);   
+}
+void fib(){
+     printf("\nFibonacci is Selected\nEnter the input:");
             int z,a=0,b=1,c;
             scanf("%d",&z);
             printf("\n");
@@ -82,10 +71,9 @@ int main(){
                 b=c;
             }
             printf("\n");
-            break;
-
-            case 6:
-            printf("\nArmstrong number is Selected\nEnter the input:");
+}
+void Armstrong(){
+     printf("\nArmstrong number is Selected\nEnter the input:");
             int t,v,l,count=0;
             scanf("%d",&t);
             v=t;
@@ -110,6 +98,37 @@ int main(){
         else{
             printf("Not Armstrong\n");
         }
+}
+int main(){
+    int o;
+    while(1){
+    printf("\n<---Menu-driven Toolkit--->\n");
+    printf("1.Reverse\n2.Palindrome\n3.Prime number\n4.Factorial\n5.Fibonacci\n6.Armstrong number\n7.Exit\n");
+    printf("Select the option:");
+    scanf("%d",&o);
+    if(o==7){
+        printf("____Exited____");
+        return 0;
+    }
+    switch(o){
+        case 1:
+          re();
+        break;
+        case 2:
+          pal();
+        break;
+        case 3:
+          prime();
+             break;
+            case 4:
+              fac();
+            break;
+            case 5:
+              fib();
+            break;
+
+            case 6:
+              Armstrong();
         break;
 
        default:
