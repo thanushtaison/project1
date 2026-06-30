@@ -8,7 +8,7 @@ void re(){
             rev=rev*10+k;
             n=n/10;
         }
-        printf("%d\n",rev);
+        printf("output : %d\n",rev);
 }
 void pal(){
     printf("\nPalindrome is Selected\nEnter the input:");
@@ -22,10 +22,10 @@ void pal(){
         }
         
         if(r==m){
-            printf("\nPalindrome\n");
+            printf("\noutpt : Palindrome\n");
         }
         else{
-            printf("\nNot a Palindrome\n");
+            printf("\noutpt : Not a Palindrome\n");
         }
 }
 int prime(){
@@ -33,7 +33,7 @@ int prime(){
              int q,f=0;
              scanf("%d",&q);
              if(q==1){
-                printf("Invalid\n");
+                printf("Invalid option\n");
                 return 0;
              }
              for(int i=2;i<q;i++){
@@ -92,6 +92,7 @@ void Armstrong(){
             sum+=p;
             v=v/10;
         }
+        printf("output : ")
         if(sum==l){
             printf("Armstrong\n");
         }
